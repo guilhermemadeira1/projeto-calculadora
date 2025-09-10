@@ -1,0 +1,118 @@
+@charset "UTF-8";
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+html, body{
+    height: 100vh;
+    width: 100vw;
+}
+body{
+    display:flex;
+    flex-flow: column;
+    justify-content: center;
+    align-items: center;
+    font-family: monospace;
+    background-color: #dddbba;
+  
+}
+.calculadora h1{
+    color: #fff;
+    margin-bottom: 15px;
+}
+.calculadora{
+    background-color: #180606;
+    box-shadow: 0px 0px 1px 1px #00000057;
+    width: 250px;
+    height: 420px;
+    border-radius: 10px;
+    padding: 5px;
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    align-items: center;
+}
+.calculadora .painel{
+    display: grid;
+    grid-auto-rows: 1fr;
+    grid-auto-columns: 1fr;
+    grid-template-columns: repeat(4,1fr); /*4 grid tracks de coluna*/
+    gap: 2px;
+    width: 90%;
+    height: 80%;
+    padding: 3px;
+}
+.calculadora .display{
+    grid-column: 1/-1;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    padding: 20px;
+    color: #fff;
+    border-radius: 2px;
+    margin-bottom: 15px;
+    background-color: #749485;
+    font-size: 1.8em;
+    overflow: hidden; /*texto que transborda é ocultado*/
+    text-overflow: ellipsis; /*reticencias se o texto transbordar*/
+    white-space: nowrap; /*texto não quebra*/
+}
+.calculadora .botoes{
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    align-items: center;
+}
+.menu-gaveta{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-flow: column nowrap;
+    position: absolute;
+    transition: top 0.9s ease-in;
+    top: 30px; /*para aplicar a transição o navegador precisa do valor inicial*/
+}
+.menu-gaveta-escondido{
+    top: -421px;
+}
+.menu-aba{
+    box-shadow: 1px 1px 1px 1px #00000050;
+    background-color: #fff;
+    border-radius: 0px 0px 10px 10px;
+    width: 50px;
+    padding: 3px;
+    text-align: center;
+    cursor: pointer;
+}
+.menu-aba #icone-aba{
+    width: 1.8em;
+}
+.btn{
+    background-color: #8b6d6d;
+    font-family: monospace;
+    border-style: none;
+    border-radius: 2px;
+    transition: 0.2s background-color;
+    font-size: 1.8em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.btn:active{
+    background-color: #ffdd80ec;
+}
+.btn-operacao{
+    background-color: #fcc36d;
+}
+.btn-funcao{
+    background-color: #f58172;
+}
+.btn-limpar{
+    background-color: #cc4d4d;
+}
+.btn-igual{
+    background-color: #82d14e;
+    grid-column: 3/5;
+}
