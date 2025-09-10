@@ -25,8 +25,8 @@ body{
 .calculadora{
     background-color: #180606;
     box-shadow: 0px 0px 1px 1px #00000057;
-    width: 250px;
-    height: 420px;
+    width: 320px;
+    height: 520px;
     border-radius: 10px;
     padding: 5px;
     display: flex;
@@ -56,7 +56,6 @@ body{
     background-color: #749485;
     font-size: 1.8em;
     overflow: hidden; /*texto que transborda é ocultado*/
-    text-overflow: ellipsis; /*reticencias se o texto transbordar*/
     white-space: nowrap; /*texto não quebra*/
 }
 .calculadora .botoes{
@@ -71,11 +70,13 @@ body{
     align-items: center;
     flex-flow: column nowrap;
     position: absolute;
-    transition: top 0.9s ease-in;
-    top: 30px; /*para aplicar a transição o navegador precisa do valor inicial*/
+    transition: all 0.9s ease-in;
+    top: 50%; /*para aplicar a transição o navegador precisa do valor inicial*/
+    transform: translateY(-50%);
 }
 .menu-gaveta-escondido{
-    top: -421px;
+    top: -521px;
+    transform: translateY(0%);
 }
 .menu-aba{
     box-shadow: 1px 1px 1px 1px #00000050;

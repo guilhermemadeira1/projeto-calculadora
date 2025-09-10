@@ -115,11 +115,7 @@ bApagarCaractere.addEventListener("click",()=>{
 });
 
 bCopiar.addEventListener("click",()=>{
-    navigator.clipboard.writeText(display.textContent); 
-    
-    //navigator.clipboard.writeText(fonte) -> copia um texto para área de transferência
-
-    //navigator.clipboard.readText(destino); -> cola um texto para área de transferência e retorna uma promise resolvida com o texto
+    navigator.clipboard.writeText(display.textContent); //copia um texto para área de transferência
 });
 
 bLimpar.addEventListener("click", ()=> {
@@ -129,8 +125,8 @@ bLimpar.addEventListener("click", ()=> {
 });
 
 bIgual.addEventListener("click",()=>{
-    let calculo = display.textContent.replace(/\./g, ""); // regex - retorna a string substituindo ponto por "" em todas as ocorrencias
-    calculo = calculo.replace(/,/g, ".") ; // regex - retorna uma string substrituindo , por . (o g diz pra remover todas e não só aprimeira ocorrência)
+    let calculo = display.textContent.replace(/\./g, ""); // regex - retorna a string substituindo . por "" em todas as ocorrencias (o g diz pra remover todas as ocorrências)
+    calculo = calculo.replace(/,/g, ".") ; // regex - retorna a string substrituindo , por . em todas as ocorrencias
     if(calculo.includes("/0")){
         display.textContent = "Cálculo inválido";
         erroDeCalculo = true;
